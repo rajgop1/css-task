@@ -15,6 +15,12 @@ Apoorva, your task is to analyze and understand the **CSS Positioning Demo** pro
 - Ensure elements behave as expected when scrolling.  
 - Be ready to discuss insights or challenges faced while understanding the implementation.  
 
+### Instructions  
+1. **Do not modify `index.html`** – It contains the final output.  
+2. **Use `position.html`** – This file is provided as a template.  
+3. **Modify `position.html` if needed** – If you don’t like the basic html structure, feel free to adjust it.  
+4. **Write all your CSS in `style.css`** – Ensure your styles are properly structured.  
+
 ### **Important Note**  
 🚨 **Do not** edit or refer to the `index.html` file. This file contains the final output.  
 📝 Instead, write your code in `position.html` and apply the necessary styles there.  
