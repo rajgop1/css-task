@@ -18,3 +18,6 @@ Apoorva, your task is to analyze and understand the **CSS Positioning Demo** pro
 ### **Important Note**  
 🚨 **Do not** edit or refer to the `index.html` file. This file contains the final output.  
 📝 Instead, write your code in `position.html` and apply the necessary styles there.  
+
+### **You've got this! 💪**  
+Take your time, analyze each section carefully, and let me know if you need any help. Happy coding! 🚀  
