@@ -21,14 +21,57 @@
             background: #333;
             color: white;
             text-align: center;
-            padding: 10px 0;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Notification Button */
+        .button-container {
+            position: relative;
+        }
+        .btn {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: red;
+            color: white;
+            font-size: 12px;
+            border-radius: 50%;
+            padding: 5px 8px;
+        }
+        .tooltip {
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: black;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .button-container:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
         }
 
         /* Side Navigation */
         .side-nav {
             position: fixed;
             left: 0;
-            top: 38px;
+            top: 50px;
             width: 200px;
             height: 100%;
             background: #444;
@@ -51,26 +94,26 @@
         .content {
             margin-left: 220px;
             padding: 20px;
+            margin-top: 60px;
         }
 
-        /* Relative Box */
+        /* Relative Parent with Absolute Child */
         .relative-box {
             position: relative;
             background: lightblue;
             padding: 20px;
-            width: 200px;
+            width: 250px;
             margin: 20px 0;
-            left: 50px;
         }
-
-        /* Absolute Box */
         .absolute-box {
             position: absolute;
+            top: 10px;
+            right: 10px;
             background: lightcoral;
-            padding: 20px;
-            width: 200px;
-            top: 150px;
-            right: 50px;
+            padding: 10px;
+            font-size: 14px;
+            color: white;
+            border-radius: 5px;
         }
 
         /* Sticky Table */
@@ -92,68 +135,18 @@
             top: 0;
             background: #f8f8f8;
         }
+
         /* Footer */
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
-        /* Button container (Relative) */
-.button-container {
-    position: relative;
-    display: inline-block;
-    margin: 50px;
-}
-
-/* Notification Badge (Absolute) */
-.badge {
-    position: absolute;
-    top: -5px;
-    right: -10px;
-    background: red;
-    color: white;
-    padding: 5px 8px;
-    font-size: 12px;
-    border-radius: 50%;
-}
-
-/* Tooltip (Absolute, appears on hover) */
-.tooltip {
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: black;
-    color: white;
-    padding: 5px 10px;
-    font-size: 12px;
-    border-radius: 5px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    white-space: nowrap;
-}
-
-.button-container:hover .tooltip {
-    opacity: 1;
-}
-
-/* Button styling */
-.btn {
-    background: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
@@ -161,13 +154,12 @@
     <header class="header">
         <span>Fixed Header</span>
 
-    <!-- Notification Button -->
-    <div class="button-container">
-        <button class="btn">🔔</button>
-        <span class="badge">3</span>
-        <div class="tooltip">You have new messages</div>
-    </div>
-    
+        <!-- Notification Button -->
+        <div class="button-container">
+            <button class="btn">🔔</button>
+            <span class="badge">3</span>
+            <div class="tooltip">You have new messages</div>
+        </div>
     </header>
     
     <!-- Side Navigation -->
@@ -182,6 +174,12 @@
     
     <!-- Main Content -->
     <main class="content">
+        <!-- Relative Box with Absolute Positioned Element -->
+        <div class="relative-box">
+            Relative Box (Parent)
+            <div class="absolute-box">Absolute Box (Child)</div>
+        </div>
+
         <!-- Sticky Table -->
         <div class="table-container">
             <table>
@@ -193,34 +191,24 @@
                     </tr>
                 </thead>
                 <tbody>
-    <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
-    <tr><td>Data 4</td><td>Data 5</td><td>Data 6</td></tr>
-    <tr><td>Data 7</td><td>Data 8</td><td>Data 9</td></tr>
-    <tr><td>Data 10</td><td>Data 11</td><td>Data 12</td></tr>
-    <tr><td>Data 13</td><td>Data 14</td><td>Data 15</td></tr>
-    <tr><td>Data 16</td><td>Data 17</td><td>Data 18</td></tr>
-    <tr><td>Data 19</td><td>Data 20</td><td>Data 21</td></tr>
-    <tr><td>Data 22</td><td>Data 23</td><td>Data 24</td></tr>
-    <tr><td>Data 25</td><td>Data 26</td><td>Data 27</td></tr>
-    <tr><td>Data 28</td><td>Data 29</td><td>Data 30</td></tr>
-    <tr><td>Data 31</td><td>Data 32</td><td>Data 33</td></tr>
-    <tr><td>Data 34</td><td>Data 35</td><td>Data 36</td></tr>
-    <tr><td>Data 37</td><td>Data 38</td><td>Data 39</td></tr>
-    <tr><td>Data 40</td><td>Data 41</td><td>Data 42</td></tr>
-    <tr><td>Data 43</td><td>Data 44</td><td>Data 45</td></tr>
-    <tr><td>Data 46</td><td>Data 47</td><td>Data 48</td></tr>
-    <tr><td>Data 49</td><td>Data 50</td><td>Data 51</td></tr>
-    <tr><td>Data 52</td><td>Data 53</td><td>Data 54</td></tr>
-    <tr><td>Data 55</td><td>Data 56</td><td>Data 57</td></tr>
-    <tr><td>Data 58</td><td>Data 59</td><td>Data 60</td></tr>
-</tbody>
-
+                    <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+                    <tr><td>Data 4</td><td>Data 5</td><td>Data 6</td></tr>
+                    <tr><td>Data 7</td><td>Data 8</td><td>Data 9</td></tr>
+                    <tr><td>Data 10</td><td>Data 11</td><td>Data 12</td></tr>
+                    <tr><td>Data 13</td><td>Data 14</td><td>Data 15</td></tr>
+                    <tr><td>Data 16</td><td>Data 17</td><td>Data 18</td></tr>
+                    <tr><td>Data 19</td><td>Data 20</td><td>Data 21</td></tr>
+                    <tr><td>Data 22</td><td>Data 23</td><td>Data 24</td></tr>
+                    <tr><td>Data 25</td><td>Data 26</td><td>Data 27</td></tr>
+                    <tr><td>Data 28</td><td>Data 29</td><td>Data 30</td></tr>
+                </tbody>
             </table>
         </div>
     </main>
-    <!-- Footer -->
+
+    <!-- Fixed Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Your Website. All rights reserved.</p>
+        &copy; 2025 My Website | All Rights Reserved
     </footer>
 </body>
 </html>
