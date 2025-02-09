@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 200vh;
+        }
+
+        /* Fixed Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Side Navigation */
+        .side-nav {
+            position: fixed;
+            left: 0;
+            top: 50px;
+            width: 200px;
+            height: 100%;
+            background: #444;
+            color: white;
+            padding: 20px;
+        }
+        .side-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        .side-nav ul li {
+            margin: 10px 0;
+        }
+        .side-nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Main Content */
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        /* Relative Box */
+        .relative-box {
+            position: relative;
+            background: lightblue;
+            padding: 20px;
+            width: 200px;
+            margin: 20px 0;
+            left: 50px;
+        }
+
+        /* Absolute Box */
+        .absolute-box {
+            position: absolute;
+            background: lightcoral;
+            padding: 20px;
+            width: 200px;
+            top: 150px;
+            right: 50px;
+        }
+
+        /* Sticky Table */
+        .table-container {
+            overflow-y: auto;
+            max-height: 200px;
+            border: 1px solid #ccc;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        thead th {
+            position: sticky;
+            top: 0;
+            background: #f8f8f8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Header -->
+    <header class="header">Fixed Header</header>
+    
+    <!-- Side Navigation -->
+    <nav class="side-nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="content">
+        <section class="relative-box">Relative Box</section>
+        <section class="absolute-box">Absolute Box</section>
+        
+        <!-- Sticky Table -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                        <th>Header 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+                    <tr><td>Data 4</td><td>Data 5</td><td>Data 6</td></tr>
+                    <tr><td>Data 7</td><td>Data 8</td><td>Data 9</td></tr>
+                    <tr><td>Data 10</td><td>Data 11</td><td>Data 12</td></tr>
+                    <tr><td>Data 13</td><td>Data 14</td><td>Data 15</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
