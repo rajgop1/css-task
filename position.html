@@ -1,57 +1,145 @@
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>CSS Positioning Demo</title>  
-    <link rel="stylesheet" href="style.css">  
-</head>  
-<body>  
+{<!DOCTYPE html>
+<html lang="en">
 
-    <!-- Fixed Header -->  
-    <header class="header">  
-        <span>Fixed Header</span>  
-        <div class="button-container">  
-            <button class="btn">🔔</button>  
-            <span class="badge">3</span>  
-            <div class="tooltip">You have new messages</div>  
-        </div>  
-    </header>  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Demo</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            margin: 0,0;
+            padding: 0,0;
+            background-color: rgb(37, 35, 35);
+        }
+        .header{
+            margin-top: 20px;
+            margin-bottom: 0px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 25px;
+            height: 60px;
+            background: rgb(37, 35, 35);
+            color: white;
+            font-size: 20px;
+            align-items: center;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+        }
+        .side-nav{            
+            margin-top: 0px;
+            font-size: 15px;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            left: 0;
+            width: 15%;
+            top: 80px;
+            height: 100%;
+            background-color: rgb(88, 87, 87);
+            padding: 20px ;
+        }
+        ul{
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .content{
+            position: relative;
+            height: 2000px;
+            width: 75%;
+            background-color: white;
+            right: 0;
+        }
+        .table-container{
+            position: absolute;
 
-    <!-- Side Navigation -->  
-    <nav class="side-nav">  
-        <ul>  
-            <li><a href="#">Home</a></li>  
-            <li><a href="#">About</a></li>  
-            <li><a href="#">Services</a></li>  
-            <li><a href="#">Contact</a></li>  
-        </ul>  
-    </nav>  
+        }
+        .table{
+            color: white;
+        }
+        
+        .footer{
+            position: fixed;
+            bottom: 0px;
+            height: 40px;
+            background-color: rgb(37, 35, 35);
+            color: white;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 15px;
+            padding-top: 10px;
+        }
+    </style>
+</head>
 
-    <!-- Main Content -->  
-    <main class="content">  
-        <div class="table-container">  
-            <table>  
-                <thead>  
-                    <tr>  
-                        <th>Header 1</th>  
-                        <th>Header 2</th>  
-                        <th>Header 3</th>  
-                    </tr>  
-                </thead>  
-                <tbody>  
-                    <tr><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>  
-                    <tr><td>Data 4</td><td>Data 5</td><td>Data 6</td></tr>  
-                    <tr><td>Data 7</td><td>Data 8</td><td>Data 9</td></tr>  
-                </tbody>  
-            </table>  
-        </div>  
-    </main>  
+<body>
 
-    <!-- Footer -->  
-    <footer class="footer">  
-        &copy; 2025 My Website | All Rights Reserved  
-    </footer>  
+    <!-- Fixed Header -->
+    <header class="header">
+        <span>Fixed Header</span>
+        <div class="button-container">
+            <button class="btn">🔔</button>
+            <span class="badge">3</span>
+            <div class="tooltip">You have new messages</div>
+        </div>
+    </header>
 
-</body>  
-</html>  
+    <!-- Side Navigation -->
+    <nav class="side-nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                        <th>Header 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data 1</td>
+                        <td>Data 2</td>
+                        <td>Data 3</td>
+                    </tr>
+                    <tr>
+                        <td>Data 4</td>
+                        <td>Data 5</td>
+                        <td>Data 6</td>
+                    </tr>
+                    <tr>
+                        <td>Data 7</td>
+                        <td>Data 8</td>
+                        <td>Data 9</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2025 My Website | All Rights Reserved
+    </footer>
+
+</body>
+
+</html>
