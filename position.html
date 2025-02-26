@@ -34,7 +34,7 @@
         }
         .side-nav{            
             margin-top: 0;
-            font-size: 20px;
+            font-size: 15px;
             display: flex;
             flex-direction: column;
             position: fixed;
@@ -64,9 +64,23 @@
             top: 100px;
             position: absolute;
             left: 10%;
-            height: 154px;
+            height: 151px;
             overflow: auto;
-
+        }
+        .button-container{
+            position: relative;
+        }
+        .tooltip{
+            position: absolute;
+            visibility: hidden;
+            background-color: black;
+            color: white;
+            top: 0;
+        }
+        .btn:hover .tooltip{
+            visibility: visible;
+            opacity: 1;
+            transition: ease-in()
         }
         .table{
             color: white;
@@ -92,6 +106,23 @@
             font-size: 15px;
             padding-top: 10px;
         }
+        .btn{
+            background: none;
+            border: none;
+            font-size: 25px;
+            position: absolute;
+        }
+        .badge{
+            position: absolute;
+            left: 30px;
+            width: 20px;
+            height:20px;
+            background-color: red;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 15px;
+            top: 0;
+        }
     </style>
 </head>
 
@@ -101,9 +132,9 @@
     <header class="header">
         <span>Fixed Header</span>
         <div class="button-container">
+            <div class="tooltip">You have new messages</div>
             <button class="btn">🔔</button>
             <span class="badge">3</span>
-            <div class="tooltip">You have new messages</div>
         </div>
     </header>
 
@@ -169,7 +200,7 @@
                         <td>Data 8</td>
                         <td>Data 9</td>
                     </tr>
-                    \<tr>
+                    <tr>
                         <td>Data 7</td>
                         <td>Data 8</td>
                         <td>Data 9</td>
