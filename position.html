@@ -69,18 +69,22 @@
         }
         .button-container{
             position: relative;
+            width: 100px;
         }
         .tooltip{
             position: absolute;
             visibility: hidden;
             background-color: black;
             color: white;
-            top: 0;
+            top: 5px;
+            left: 35px;
+            font-size: 15px;
+
         }
-        .btn:hover .tooltip{
+        .button-container:hover .tooltip{
             visibility: visible;
             opacity: 1;
-            transition: ease-in()
+            display: inline;
         }
         .table{
             color: white;
@@ -110,11 +114,10 @@
             background: none;
             border: none;
             font-size: 25px;
-            position: absolute;
         }
         .badge{
             position: absolute;
-            left: 30px;
+            left: 0px;
             width: 20px;
             height:20px;
             background-color: red;
